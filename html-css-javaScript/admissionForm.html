@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="formstyle.css" />
+    <title>Document</title>
+    
+</head>
+<body>
+    <header class="header">
+        <div class="header-grid">
+            <div class="logo">
+                <img src="./img/adm logo.jpg"  width=125px; />
+            </div>
+            <div class="website-menu">
+                <div>
+                  <ul class="menu">
+                    <li> About University</a></li>
+                    <li>Contact Us</a></li>
+                  </ul>
+                </div>
+        </div>
+    </header>
+   <div class="registration-form">
+       <h2>Online Admission Registration Form</h2>
+   </div> 
+   <div class="input-row">Name: <input id="name" type="text" placeholder="Fullname"></div>
+   <div class="input-row">Father Name: <input id="father" type="text"></div>
+   <div class="input-row">Mother Name: <input id="mother" type="text"></div>
+   <div class="input-row">Email id: <input id="email" type="text" placeholder="Enter your Email address"></div>
+   <div class="input-row">Mobile no. <input id="number" type="text" placeholder="Phone number"></div>
+   <div class="input-row">
+       <div>Gender:</div>
+       <div>
+         <input type="radio" type="radio" name="gender">
+          male
+         <input type="radio" type="radio" name="gender">
+         female
+         <input type="radio" type="radio" name="gender">
+         transgender
+        </div>
+   </div>
+   <label for="Date">Date of Birth:</label>
+   <input type="date" id="date" name="date of birth">
+   <button onclick="submitForm()"> Submit</button>
+</body>
+</html>
