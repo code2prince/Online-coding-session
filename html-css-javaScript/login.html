@@ -4,36 +4,57 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="login.css" />
     <title>Document</title>
+    
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    
+    <!-- css -->
+    <link rel="stylesheet" href="login.css" />
+    
+    <!-- script -->
     <script src="login.js"></script>
 </head>
 <body>
     <header class="header">
         <div class="header-grid">
-            <div class="logo">
-                <img src="logo.png"  width=125px; />
+            <div class="logo-websitetitle">
+                <img class="logo" src="logo.png" />
+                <h3>Annonymous Engineering College</h3>
             </div>
             <div class="website-menu">
-                <h1>Login</h1>
+                <div><a class="menu-link" href="#">About</a></div>
+                <div><a class="menu-link" href="#">Contact</a></div>
+                <div><a class="menu-link" href="#">Career</a></div>
             </div>
-            
+        </div>
+    </header>
+
+
+    <div class="login-container">
+        <h4>Please Login</h4>
+        <div>
+            <div class="input-grid">
+                <span>Username: </span>
+                <input id="userid" type="text"> 
+            </div>
+            <div  class="input-grid">
+                <span>Password: </span>
+                <input id="password" type="password"> 
+            </div>
+            <div class="input-grid">
+                <div></div>
                 <div>
-                  <ul class="menu">
-                    <ul><a href="form.html">Home</a></ul>
-                    <ul> About University</ul>
-                    <ul><a href="contactus.html">Contact Us</a></ul>
-                  </ul>
+                    <button onclick ="submitForm()">Login</button>
+                    <a href="forget.html">Forget-Password?</a> 
                 </div>
             </div>
-    </header>
-    <div class="log-in">
-        <h2>Please Login</h2>
+        </div>
     </div> 
     
-    <span class="input-row" >User id:</span><input id="userid" type="text"> 
-    <span class="input-row"> Password:</span> <input id="password" type="password"></span> <br/>
-    <button onclick ="submitForm()">Login</button>
-    <lu><a href="forget.html">Forget-Password?</a></lu>  
+    
+    
 </body>
 </html>
