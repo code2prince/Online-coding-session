@@ -1,0 +1,26 @@
+body{
+    background-color:aquamarine;
+   /* background-image: url(pc.jpg);*/
+    
+}
+.input-row{
+    display:grid;
+    grid-template-columns: 100px 300px;
+    /*grid-gap:20px;*/
+}
+h1 { color:blue;}
+.header-grid{
+display:grid;
+grid-template-columns: auto auto auto;
+justify-content:space-between;
+background-color: aqua;
+}
+h4{ color:mediumslateblue}
+h2{ color:brown}
+button {
+    background-color:yellow;
+}
+.input-row-dob{
+    display:grid;
+    grid-template-columns: 100px 100px;
+}
