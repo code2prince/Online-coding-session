@@ -20,11 +20,26 @@
             checkboxes.forEach((checkbox) => {
                 language.push(checkbox.value);
             });
+
+
+            var radioButtons = document.querySelectorAll('input[name="gender"]');
+            var selectedGender;
+            // for(var i=0; i<radioButtons.length; i++)
+            for (var rd of radioButtons) {
+                if (rd.checked) {
+                    selectedGender = rd.value;
+                    break;
+                }
+            }
+
+            console.log(selectedGender);
+
+
            
 
-            if(name && email && number  ) {
-            console.log('send data to server' ,name,email,number,fathername,mothername,radio,address,qualification,language,gender);
-            } else {
-            alert('Please provide full detail')
-           }
+        //     if(name && email && number  ) {
+        //     console.log('send data to server' ,name,email,number,fathername,mothername,address,qualification,language);
+        //     } else {
+        //     alert('Please provide full detail')
+        //    }
         }
