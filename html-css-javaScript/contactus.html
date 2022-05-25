@@ -12,10 +12,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
     
     <!-- css -->
-    <link rel="stylesheet" href="login.css" />
+    <link rel="stylesheet" href="contact.css" />
     
     <!-- script -->
-    <script src="login.js"></script>
+    <script src="contact.js"></script>
 </head>
 <body>
     <header class="header">
@@ -26,7 +26,7 @@
             </div>
             <div class="website-menu">
                 <div><a class="menu-link" href="index/index.html">Home</a></div>
-                <div><a class="menu-link" href="contactus.html">Contact</a></div>
+                <div><a class="menu-link" href="login.html">Login</a></div>
                 <div><a class="menu-link" href="admissionForm.html">Form</a></div>
                 <div><a class="menu-link" href="#">About</a></div>
             </div>
@@ -34,26 +34,27 @@
     </header>
 
 
-    <div class="login-container">
-        <h4>Please Login</h4>
-        <div>
-            <div class="input-grid">
-                <span>Username: </span>
-                <input id="userid" type="text"> 
-            </div>
-            <div  class="input-grid">
-                <span>Password: </span>
-                <input id="password" type="password"> 
-            </div>
-            <div class="input-grid">
-                <div></div>
-                <div>
-                    <button onclick ="submitForm()">Login</button>
-                    <a href="forget.html">Forget-Password?</a> 
-                </div>
-            </div>
+    <h3> Contact Us:</h3>
+    <h4> Annonymous Engineering College</h4>
+    <p> Chennai (600001) India</p>
+    <p>telephone no. +91 9999988888 ,9898989898</p>
+    <p>Email: Annonymous@gmail.com</p>
+    <div class="contact-form">
+        <h3>Contact Us:</h3>
+    
+        <div class="input-row">Name:  <input id="name" type="text" /></div>
+        <div class="input-row">Email: <input id="email" type="text" /> </div>
+        <div class="input-row">Phone: <input id="phone" type="text" /></div>
+        <div class="input-row">Query: <textarea id="query" ></textarea></div>
+        <div class="input-row">
+          <div></div>
+              <div>
+                 <button onclick="submitForm()">Submit</button>
+              </div>
         </div>
-    </div> 
+        
+    </div>
+
     
     
     

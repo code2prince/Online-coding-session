@@ -1,26 +1,72 @@
-body{
-    background-color:aquamarine;
-   /* background-image: url(pc.jpg);*/
-    
+body {
+    margin: 0;
+    background-color: bisque;
 }
+
+* {
+    font-family: 'Lato', sans-serif;
+}
+
 .input-row{
     display:grid;
     grid-template-columns: 100px 300px;
-    /*grid-gap:20px;*/
+    grid-gap:20px;
 }
-h1 { color:blue;}
+.header {
+    background-color: aquamarine;
+    padding: 10px 20px;
+    border-bottom: 1px solid aqua;
+    box-shadow: 1px 2px 3px #bbb;
+}
+
+h3 { color:purple;}
 .header-grid{
 display:grid;
-grid-template-columns: auto auto auto;
+grid-template-columns: auto auto;
 justify-content:space-between;
-background-color: aqua;
+background-color: aquamarine;
 }
+
 h4{ color:mediumslateblue}
-h2{ color:brown}
 button {
     background-color:yellow;
 }
 .input-row-dob{
     display:grid;
     grid-template-columns: 100px 100px;
+    grid-gap:20px;
+}
+.website-menu {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 10px;
+    align-items: center;
+}
+
+.menu-item {
+    text-decoration:none;
+    color:blueviolet;
+}
+.menu-item:hover {
+      color:red;
+}
+.logo {
+    display: grid;
+    grid-template-columns: 50px auto;
+    grid-gap: 20px;
+    align-items: center;
+}
+.scrollable-nottification{
+    background-color: #3b92ac;
+    color:white;
+    padding: 5px 10px;
+}
+.registration-form {
+    width: 500px;
+    border: 1px solid #cdcdcd;
+    padding: 20px;
+    margin: 50px auto 0;
+    border-radius: 10px;
+    box-shadow: 1px 2px 3px #bbb;
+    background-color:wheat;
 }

@@ -45,18 +45,16 @@ body {
     text-decoration: underline;
     color: #0099ff;
 }
-
-.login-container {
-    width: 350px;
+.input-row{
+    display:grid;
+    grid-template-columns: 60px 400px;
+}
+.contact-form {
+    width: 500px;
     border: 1px solid #cdcdcd;
     padding: 20px;
-    margin: 100px auto 0;
-    border-radius: 5px;
-    box-shadow: 1px 2px 3px #bbb;
-}
-
-.input-grid{
-    display: grid;
-    grid-template-columns: 100px auto;
-    margin-bottom: 15px;
+    margin: 50px auto 0;
+    border-radius: 20px;
+    background-color: #0099ff;
+    
 }

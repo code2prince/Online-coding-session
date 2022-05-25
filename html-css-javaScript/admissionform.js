@@ -35,6 +35,20 @@
             console.log(selectedGender);
 
 
+
+            var radioButtons = document.querySelectorAll('input[name="Occupation"]');
+            var selectedOccupation;
+            // for(var i=0; i<radioButtons.length; i++)
+            for (var rd of radioButtons) {
+                if (rd.checked) {
+                    selectedOccupation = rd.value;
+                    break;
+                }
+            }
+
+            console.log(selectedOccupation);
+
+
            
 
         //     if(name && email && number  ) {
