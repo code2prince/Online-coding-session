@@ -58,3 +58,8 @@ body {
     background-color: #0099ff;
     
 }
+.scrollable-nottification{
+    background-color: yellowgreen;
+    color: #ffffff;
+    padding: 5px 10px;
+}

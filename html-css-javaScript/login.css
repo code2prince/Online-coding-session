@@ -60,3 +60,17 @@ body {
     grid-template-columns: 100px auto;
     margin-bottom: 15px;
 }
+.scroll{
+        background-color: yellowgreen;
+        color: #ffffff;
+        padding: 5px 10px;
+}
+.btn{
+    color: #212529;
+    background-color: #ffea07;
+    display:grid;
+    grid-template-columns: 100px auto;
+    margin: 2px;
+    text-align: center;
+
+}
