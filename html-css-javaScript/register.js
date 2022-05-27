@@ -72,4 +72,5 @@ function Login(){
 function getInfo(){
     var name=document.getElementById('name').value;
     var password=document.getElementById('password').value;
+    console.log('getting user id and password',name,password);
 }
