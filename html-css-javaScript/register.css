@@ -1,0 +1,59 @@
+body {
+    margin: 0;
+    background-color: azure;
+}
+
+* {
+    font-family: 'Lato', sans-serif;
+}
+
+.header-grid{
+    display:grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    background-color: aquamarine;
+}
+.header {
+    background-color: aquamarine;
+    padding: 10px 20px;
+    border-bottom: 1px solid aqua;
+    box-shadow: 1px 2px 3px #bbb;
+}
+.logo{
+    display:grid;
+    grid-template-columns: auto auto;
+    grid-gap:20px;
+    align-items: center;
+}
+.website-menu{
+    display:grid;
+    grid-template-columns: auto auto auto auto auto;
+    grid-gap:10px;
+    align-items: center;
+}
+.menu-item:hover{
+    color:red;
+}
+.menu-item {
+    text-decoration:none;
+    color:blue;
+}
+.register-container {
+    width: 350px;
+    border: 1px solid #cdcdcd;
+    padding: 20px;
+    margin: 100px auto 0;
+    border-radius: 10px;
+    box-shadow: 1px 2px 3px #bbb;
+    background-color:bisque;
+}
+.input-grid{
+    display: grid;
+    grid-template-columns: 135px auto;
+    margin-bottom: 10px;
+}
+.scroll{
+    background-color: yellowgreen;
+    color: #ffffff;
+    padding: 5px 10px;
+}
