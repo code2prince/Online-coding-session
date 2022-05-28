@@ -7,7 +7,7 @@
             var email = document.getElementById('email').value;
             var number = document.getElementById('number').value;
             var address=document.getElementById('address').value;
-            var Date =document.getElementById('date').value
+            var dateofbirth = document.getElementById('date').value;
             
              
             var checkboxes = document.querySelectorAll('input[name="qualification"]:checked');
@@ -71,7 +71,7 @@
            
 
             if(name && email && number  ) {
-            console.log('send data to server' ,name,selectedGender,dateofbirth,qualification,language,email,number,fathername,selectedqualification2,selectedOccupation,mothername,selectedqualification1,address);
+            console.log('send data to server' ,name,selectedGender,dateofbirth,language,email,number,fathername,selectedqualification2,selectedOccupation,mothername,selectedqualification1,address);
             } else {
             alert('Please provide full detail')
            }

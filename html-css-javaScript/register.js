@@ -18,27 +18,27 @@ function createUser(){
     var passwordMatched = password === confirmPassword;
 
     if(!userid && !password) {
-        console.log('Please engter username and password');
+        console.log('Please enter username and password');
         return;
     }
     
     if(!passwordMatched) {
-        console.log('password and cnf \pass doesnt match');
+        console.log('password and confirm password doesnt match');
         return;
     }
 
     if(!isPasswordOK) {
-        console.log('password sohuld have one numbner, 1 special charaacter and length between 8 to 16');
+        console.log('password sohuld have one number, 1 special character and length between 8 to 16');
         return;
     }
 
-    console.log('Welcome ', name, 'you are successfully reggistered');
+    console.log('Welcome ', name, 'you are successfully registered');
 
 }
 
 function validatePassword(password) {
 
-    var format = /[0-9`@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
+    var format = /[0-9 `@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
     var isPasswordValid = format.test(password);
 
     var length = password.length;
@@ -59,8 +59,3 @@ function validatePassword(password) {
 
 
 
-function getInfo(){
-    var name=document.getElementById('name').value;
-    var password=document.getElementById('password').value;
-    console.log('getting user id and password',name,password);
-}

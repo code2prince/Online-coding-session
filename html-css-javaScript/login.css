@@ -31,7 +31,7 @@ body {
 
 .website-menu {
     display: grid;
-    grid-template-columns: auto auto auto auto auto;
+    grid-template-columns: auto auto auto auto auto auto;
     grid-gap: 10px;
     align-items: center;
 }
