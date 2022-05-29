@@ -32,11 +32,6 @@
                     break;
                 }
             }
-
-            
-
-
-
            var radioButtons = document.querySelectorAll('input[name="Occupation"]');
             var selectedOccupation;
             // for(var i=0; i<radioButtons.length; i++)
