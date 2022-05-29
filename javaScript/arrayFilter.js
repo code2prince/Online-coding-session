@@ -85,7 +85,13 @@ var registeredStudents = [
 1 find all the students who has got marks equal or greater than 60%
 */
 function studentMoreThanSixtyPercent() {
-    
+    registeredStudents.filter(function(item){
+        if(item.markPercent >=60 ){
+            console.log('percentage');
+            return;
+        }
+    }
+    )
 }
 
 /*
