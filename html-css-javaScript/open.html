@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,75 +8,73 @@
     <title>register</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="open.css" />
     <title>register</title>
     <script src="open.js"></script>
 </head>
+
 <body>
-<header class="header">
-    <div class="header-grid">
-        <div class="logo">
-            <img src="logo.png" width=50px; />
-            <h3>Annonymous Engineering College </h3>
-        </div>
-        <div class="website-menu">
-            <div> <a class="menu-item" href="index/index.html">Home</a> </div>
+    <header class="header">
+        <div class="header-grid">
+            <div class="logo">
+                <img src="logo.png" width=50px; />
+                <h3>Annonymous Engineering College </h3>
+            </div>
+            <div class="website-menu">
+                <div> <a class="menu-item" href="index/index.html">Home</a> </div>
                 <div> <a class="menu-item" href="about.html">About</a> </div>
                 <div> <a class="menu-item" href="contactus.html">Contact Us</a> </div>
                 <div> <a class="menu-item" href="login.html">Login</a> </div>
                 <div> <a class="menu-item" href="admissionForm.html">form</a> </div>
+            </div>
         </div>
-    </div>
 
-</header>
-<div class="scroll">
-    <marquee>
-        WELCOME TO ANNONYMOUS ENGINEERING COLLEGE (CHENNAI)   &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;B. Tech 2022 admission open. {ApplyNow}   &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;  M. Tech registration window closed.
-    </marquee>
-</div>
-<div class="open-admission">
-    <h3> Admission Open:</h3>
-    <div class="input-grid">
-        <span>Full-Name:</span>
-        <input id="name" type="text">
+    </header>
+    <div class="scroll">
+        <marquee>
+            WELCOME TO ANNONYMOUS ENGINEERING COLLEGE (CHENNAI) &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;B. Tech 2022
+            admission open. {ApplyNow} &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp; M. Tech registration window closed.
+        </marquee>
+    </div>
+    <div class="open-admission">
+        <h3> Admission Open:</h3>
+        <div class="input-grid">
+            <lebel for="course">Choose a Course:</lebel>
+            <select name="Choose a Course" id="course">
+                <option value="select">Select</option>
+                <option value="Btech">BTech</option>
+                <option value="Mtech">MTech</option>
+                <option value="MBA">MBA</option>
+                <option value="Phd">Phd</option>
+            </select>
         </div>
-    <div class="input-grid">
-        <span>Email id:</span>
-        <input id="email" type="text">
-    </div>
-     <div class="input-grid">
-            <span>Mobile no:</span>
-            <input id="phone" type="text">
-      </div> 
-      <div class="input-grid">
-           <span>Aadhar no.:</span>
-           <input id="aadhar" type="text">
-      </div>
-<div class="input-grid">
-    <lebel for="course">Choose a Course:</lebel>
-    <select name="Choose a Course" id="course">
-        <option value="Btech">BTech</option>
-        <option value="Mtech">MTech</option> 
-        <option value="MBA">MBA</option>
-        <option value="Phd">Phd</option>
-    </select>
-</div>
-    <div class="input-grid">
-        <lebel for="stream">Choose a Stream:</lebel>
-        <select name="Choose a stream" id="stream">
-            <option value="select">select</option>
-            <option value="Computer Science">Computer-Science(CSE)</option>
-            <option value="Mechanical ">Mechanical</option> 
-            <option value="Civil">Civil</option>
-            <option value="Electical">Electical(EE)</option>
-            <option value="Aeronotical">Aeronotical</option>
-        </select>
-    </div>
-
-    <div class="input-grid">
-        <div>Year-Gap:</div>
+        <div class="input-grid">
+            <lebel for="stream">Choose a Stream:</lebel>
+            <select name="Choose a stream" id="stream">
+                <option value="select">select</option>
+                <option value="Computer Science">Computer-Science(CSE)</option>
+                <option value="Mechanical ">Mechanical</option>
+                <option value="Civil">Civil</option>
+                <option value="Electical">Electical(EE)</option>
+                <option value="Aeronautical">Aeronautical</option>
+            </select>
+        </div>
+        <div class="input-grid">
+            <lebel for="fee">Per Sem Fee:</lebel>
+            <select name="fees" id="fee">
+                <option value="select">select</option>
+                <option value="40,000">40,000</option>
+                <option value="45,000">45,000</option>
+                <option value="50,000">50,000</option>
+                <option value="55,000">55,000</option>
+            </select>
+        </div>
+        <div class="input-grid">
+            <div>Year-Gap allowed:</div>
             <div>
                 <input name="yeargap" type="radio" value="yes">
                 Yes
@@ -83,25 +82,39 @@
                 No
             </div>
         </div>
-    
-
-    <div class="input-grid">
-        <div>12th mark %:</div>
+        <div class="input-grid">
+            <div>Minumum % reqd.:</div>
             <div>
                 <input name="marks" type="radio" value="below 60%">
                 Below 60%
                 <input name="marks" type="radio" value="above 60%">
-                Above 60%
+                Above or =60%
             </div>
+        </div>
+        <h4> Apllication Dates:</h4>
+        <div class="input-row">
+            <label for="Date">Starting Date:</label>
+            <input type="date" id="date1" name="startdate">
+        </div>
+        <div class="input-row">
+            <label for="Date">Last Date to apply:</label>
+            <input type="date" id="date2" name="enddate">
+        </div>
+        <h3> Exam Details:</h3>
+        <div class="input-row">
+            <label for="Date">Exam Date:</label>
+            <input type="date" id="date3" name="examdate">
+        </div>
+        <div class="input-row">
+            <label for="Date">Result Date:</label>
+            <input type="date" id="date4" name="resultdate">
         </div>
         <div class="input-grid">
             <div></div>
-                <div>
-                        <button onclick ="courseSubmit()">Submit</button> 
-                </div>
+            <div>
+                <button onclick="courseSubmit()">Submit</button>
             </div>
-
+        </div>
     </div>
-</div>
 </body>
 </html>

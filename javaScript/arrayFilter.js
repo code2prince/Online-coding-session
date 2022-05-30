@@ -1,4 +1,4 @@
-var registeredStudents = [
+var student = [
     {
         id: 1,
         name: 'ankit',
@@ -81,28 +81,48 @@ var registeredStudents = [
     }
 ];
 
+
+
 /*
 1 find all the students who has got marks equal or greater than 60%
 */
-function studentMoreThanSixtyPercent() {
-    registeredStudents.filter(function(item){
-        if(item.markPercent >=60 ){
-            console.log('percentage');
-            return;
-        }
-    }
-    )
-}
+var output = student.filter((x) => x.markPercent >=60);
+console.log(output);
+
 
 /*
 2 find all the students who has got marks less than 60%
 */
+var less = student.filter((x) => x.markPercent <60);
+console.log(less);
+
 
 /*
 3 find all the students who has year gap
 */
-
+var out = student.filter((x) => x.yearGap ==="yes");
+console.log(out);
 /*
 4 find all the students who has no year gap
 */
+var out1 = student.filter((x) => x.yearGap ==="no");
+console.log(out1);
 
+
+
+
+
+
+/*var out = register.map((x) => x.name);
+console.log(out);
+/*  [ 'ankit',
+  'ankita',
+  'seema',
+  'amit',
+  'rahul',
+  'Meena',
+  'Amar',
+  'raj',
+  'ragini',
+  'jai' ]
+*/

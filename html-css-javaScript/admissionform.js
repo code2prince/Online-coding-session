@@ -15,6 +15,28 @@
             checkboxes.forEach((checkbox) => {
                 qualification.push(checkbox.value);
             });
+        
+
+            var radioButtons = document.querySelectorAll('input[name="yeargap"]');
+    var selectedyeargap;
+    // for(var i=0; i<radioButtons.length; i++)
+    for (var rd of radioButtons) {
+        if (rd.checked) {
+            selectedyeargap = rd.value;
+            break;
+        }
+    }
+
+
+    var radioButtons = document.querySelectorAll('input[name="marks"]');
+    var selectedmarks;
+    // for(var i=0; i<radioButtons.length; i++)
+    for (var rd of radioButtons) {
+        if (rd.checked) {
+            selectedmarks = rd.value;
+            break;
+        }
+    }
             
             var checkboxes =document.querySelectorAll('input[name="language"]:checked');
             var language = [];
@@ -66,7 +88,7 @@
            
 
             if(name && email && number  ) {
-            console.log('send data to server' ,name,selectedGender,dateofbirth,language,email,number,fathername,selectedqualification2,selectedOccupation,mothername,selectedqualification1,address);
+            console.log('send data to server' ,name,selectedyeargap,selectedmarks,selectedGender,dateofbirth,language,email,number,fathername,selectedqualification2,selectedOccupation,mothername,selectedqualification1,address);
             } else {
             alert('Please provide full detail')
            }
