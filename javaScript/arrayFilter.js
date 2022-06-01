@@ -113,8 +113,12 @@ console.log(out1);
 
 
 
-/*var out = register.map((x) => x.name);
+var out = student.map((x) => x.name);
 console.log(out);
+student.forEach((x) => console.log(x.name));
+
+var out = student.map((x) => x.name );
+
 /*  [ 'ankit',
   'ankita',
   'seema',

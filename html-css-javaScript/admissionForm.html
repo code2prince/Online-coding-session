@@ -21,7 +21,7 @@
         <div class="header-grid">
             <div class="logo">
                 <img src="logo.png" width=50px; />
-                <h3> Annonymous Engineering College</h3>
+                <h3>  Engineering College ,Chennai</h3>
             </div>
             <div class="website-menu">
                 <div> <a class="menu-item" href="index/index.html">Home</a> </div>
@@ -37,7 +37,7 @@
 
     <div class="scrollable-nottification">
         <marquee>
-            WELCOME TO ANNONYMOUS ENGINEERING COLLEGE (CHENNAI)  &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;B. Tech 2022 admission open. {ApplyNow}   &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;  M. Tech registration window closed.
+            WELCOME TO ENGINEERING COLLEGE (CHENNAI)  &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;B. Tech 2022 admission open. {ApplyNow}   &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;  M. Tech registration window closed.
         </marquee>
     </div>
 
@@ -74,10 +74,10 @@
     <div class="input-row">
         <div>Previous marks%:</div>
         <div>
-            <input name="marks" type="radio" value="below 60%">
-            Below 60%
-            <input name="marks" type="radio" value="above 60%">
-            Above or =60%
+            <input name="marks" type="radio" value="below 60">
+            Below 60
+            <input name="marks" type="radio" value="above 60">
+            60 or Above
         </div>
     </div>
 
@@ -105,21 +105,9 @@
     <div class="input-row">Email id: <input id="email" type="text" placeholder="Enter your Email address"></div>
     <div class="input-row">Mobile no. <input id="number" type="text" placeholder="Phone number"></div>
 
-    <h4>Parent's Details</h4>
+   
     <div class="input-row">Father Name: <input id="fathername" type="text" placeholder="Father's Name"></div>
-    <div class="input-row">
-        <div>Father Qualification:</div>
-        <div>
-            <input type="radio" value="10th" name="qualification2">
-            10th
-            <input type="radio" value="12th" name="qualification2">
-            12th
-            <input type="radio" value="graduate" name="qualification2">
-            Graduate
-            <input type="radio" value="pg" name="qualification2">
-            PG
-        </div>
-    </div>
+    
 
     <div class="input-row">
         <div>Occupation:</div>
@@ -133,20 +121,25 @@
         </div>
     </div>
     <div class="input-row">MotherName: <input id="mothername" type="text" placeholder="Mother's Name"></div>
+    
+   
     <div class="input-row">
-        <div>Mother Qualification:</div>
+        <div>Aadhar Card:</div>
         <div>
-            <input type="radio" value="10th" name="qualification1">
-            10th
-            <input type="radio" value="12th" name="qualification1">
-            12th
-            <input type="radio" value="graduate" name="qualification1">
-            Graduate
-            <input type="radio" value="postgraduate" name="qualification1">
-            PG
+            <form>
+                <input type="file" id="myFile" name="filename">
+            </form>
         </div>
     </div>
 
+    <div class="input-row">
+        <div>12th Marksheet:</div>
+        <div>
+            <form>
+                <input type="file" id="myFile" name="filename">
+            </form>
+        </div>
+    </div>
 
 
     <div class="input-row"> Address: <input id="address" type="text" placeholder="Enter your parmanent address"> </div>
@@ -155,10 +148,13 @@
        <div></div>
        <div>
             <button onclick="submitForm()"> Submit</button>
-            <a href="login.html">(Login)Registered already</a>
+           
        </div>
     </div>
 </div>
+
+
+
 </body>
 
 </html>

@@ -1,6 +1,19 @@
 
          console.log("Details");
          function submitForm(){
+
+           /* var name=document.name.value;
+            var mobileno=document.mobileno.value;
+
+            var tr= document.createElement('tr');
+            var td1 = tr.appendChild(document.createElement('td'));
+            var td2 = tr.appendChild(document.createElement('td'));
+            td1.innerHTML=name;
+            td2.innerHTML=mobileno;
+             document.getElementById("tb1").appendChild(tr); */
+
+
+
             var name = document.getElementById('name').value;
             var fathername=document.getElementById('fathername').value;
             var mothername=document.getElementById('mothername').value;
