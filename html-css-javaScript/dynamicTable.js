@@ -81,6 +81,8 @@ var students = [
     }
 ];
 
+
+
 function printTable() {
     var table = document.createElement('table');
     var tr = document.createElement('tr');

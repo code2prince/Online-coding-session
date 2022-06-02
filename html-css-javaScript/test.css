@@ -1,0 +1,19 @@
+.container{
+    background-color: aquamarine;
+    padding: 20px;
+    margin-bottom: 10px;
+   
+}
+.input-row{
+    display:grid;
+    grid-template-columns: 70px 200px;
+    margin-bottom:10px;
+}
+#button{
+    background-color:red;
+    cursor: pointer;
+}
+.data{
+    display:grid;
+    grid-template-columns: 50% 50%;
+}
