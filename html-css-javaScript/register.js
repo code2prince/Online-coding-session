@@ -1,4 +1,5 @@
 
+console.log('register.js loaded');
 var userDatabase = [
     { 
        

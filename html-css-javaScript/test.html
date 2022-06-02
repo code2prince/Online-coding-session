@@ -5,38 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet"  href="test.css" />
+    <link rel="stylesheet" href="test.css" />
+
 </head>
 <body>
-    <div class="data">
-      <div class="container">
-        <div class="input-row">Name: <input id="name" type="text" name="name"></div>
-        <div class="input-row">Email: <input id="email" type="text" name="email"></div>
-        <div class="input-row">Number: <input id="number" type="text" name="number"></div>
-        <div class="input-row">
-            <div></div>
-            <div>
-                <input type="button" id= "button" value="AddData" onclick="addStudent();" />
+    <div class="fifty-fifty-grid">
+        <div>
+            <h2>Student Form</h2>
+            <div class="studnet-form">
+                <div class="input-row">Name: <input id="name" type="text" name="name"></div>
+                <div class="input-row">Email: <input id="email" type="text" name="email"></div>
+                <div class="input-row">Number: <input id="number" type="text" name="number"></div>
+                <div class="input-row">
+                    <div></div>
+                    <div>
+                        <input type="button" id= "button" value="AddData" onclick="addStudent();" />
+                    </div>
+                </div>
             </div>
         </div>
-      </div>
-     <div>
-         <table id="tb1" class="table" border="1">
-             <tr>
-                 <th>Name</th>
-                 <th>Email</th>
-                 <th>Number</th>
-             </tr>
-     </div>
+        <div >
+            <h2>Studnet List</h2>
+            <div id="studnet-list">
+
+            </div>
+        </div>
     </div>
+        
 
-             <tbody>
 
-             </tbody>
-    
-         </table>
-    </form>
-
-    <script scr="test.js"></script>
+    <script src="test.js"></script>
 </body>
 </html>

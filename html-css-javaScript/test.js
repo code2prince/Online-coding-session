@@ -1,52 +1,86 @@
-console.log('hello');
-/*var list1=[];
-var list2=[];
-var list3=[];
-var n=1;
-var x=0;
-
+var studentList = [];
 
 function addStudent()
 { 
-   var addrow=document.getElementById('show');
-   var newrow= addrow.insertrow(n);
-   list1[x]= document.getElementById("name").value;
-   list2[x]= document.getElementById("email").value;
-   list3[x]= document.getElementById("number").value;
+  var name = document.getElementById("name").value;
+  var email = document.getElementById("email").value;
+  var number = document.getElementById("number").value;
 
-   var cell1= newrow.insertCell(0);
-   var cell2= newrow.insertCell(1);
-   var cell3= newrow.insertCell(2);
-   cell1.innerHTML=list1[x];
-   cell2.innerHTML=list2[x];
-   cell3.innerHTML=list3[x];
-   n++;
-   x++;
+  
+
+  var studentObject = {
+    id: studentList.length +1,
+    name: name,
+    email: email,
+    contact: number,
+  };
+
+
+  studentList.push(studentObject);
+
+  console.log(studentList);
+
+  displayStudent(studentList);
+
 }
 
 
-  /*  var name = document.sample.name.value;
-    var email = document.sample.email.value;
-    var phone = document.sample.phone.value;
+function displayStudent(list){
+  var whereToDisplay = document.getElementById('studnet-list');
+  whereToDisplay.innerHTML = '';
 
-    var tr = document.createElement('tr');
+  for(var i=0; i<list.length; i++) {
 
-    var td1 = tr.appendChild(document.createElement('td'));
-    var td2 = tr.appendChild(document.createElement('td'));
-    var td3 = tr.appendChild(document.createElement('td'));
+    var seqNum  = document.createElement('div');
+    seqNum.innerText = list[i].id;
 
-    td1.innerHTML='name';
-    td2.innerHTML='email';
-    td3.innerHTML='number';
+    var name = document.createElement('div');
+    name.innerText = list[i].name;
+  
+    var email = document.createElement('div');
+    email.innerText = list[i].email;
+  
+    var number = document.createElement('div');
+    number.innerText = list[i].contact;
 
-    tr.appendChild(td1);
-    tr.appendChild(td2);
-    tr.appendChild(td3);
-   
-
-    table.appendChild(tr);
-
+    var deleteStudnetBtton =  document.createElement('div');
+    deleteStudnetBtton.setAttribute('data-id', list[i].id);
+    deleteStudnetBtton.innerText = 'X';
+    deleteStudnetBtton.onclick = deleteUser;
+    
 
 
-document.getElementById("td1").appendChild("td2");
+    var studetRow = document.createElement('div');
+    studetRow.setAttribute('class', 'studet-row');
+
+
+
+    studetRow.appendChild(seqNum);
+    studetRow.appendChild(name);
+    studetRow.appendChild(email);
+    studetRow.appendChild(number);
+    studetRow.appendChild(deleteStudnetBtton);
+
+    whereToDisplay.appendChild(studetRow)
+
+
+  }
+
+
+  function deleteUser(e) {
+    console.log('deleteing user', e.target);
+    console.log(e.target.dataset.id);
+
+    Array.filter()
+
+    var newList = studentList.filter(fasdfasdfasdfasdf);
+
+    displayStudent(newList)
+
+    // first remove studnet form studentList (use the id to do achive that)
+    // call displayStudent with new studentList
+  }
+
+  
+
 }

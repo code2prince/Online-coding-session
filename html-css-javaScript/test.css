@@ -1,8 +1,7 @@
-.container{
-    background-color: aquamarine;
-    padding: 20px;
-    margin-bottom: 10px;
-   
+.fifty-fifty-grid {
+    display: grid;
+    grid-template-columns: 48% 45%;
+    grid-gap: 2%;
 }
 .input-row{
     display:grid;
@@ -13,7 +12,8 @@
     background-color:red;
     cursor: pointer;
 }
-.data{
-    display:grid;
-    grid-template-columns: 50% 50%;
+.studet-row {
+    display: grid;
+    grid-template-columns: 30px 200px 250px 100px 30px;
+    border-bottom: 1px solid #cdcdcd;
 }
