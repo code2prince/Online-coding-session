@@ -9,8 +9,10 @@
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="admissionform.css" />
     <title>Reg.Form</title>
     <script src="admissionform.js"></script>
@@ -21,7 +23,7 @@
         <div class="header-grid">
             <div class="logo">
                 <img src="logo.png" width=50px; />
-                <h3>  Engineering College ,Chennai</h3>
+                <h3> Engineering College ,Chennai</h3>
             </div>
             <div class="website-menu">
                 <div> <a class="menu-item" href="index/index.html">Home</a> </div>
@@ -29,132 +31,131 @@
                 <div> <a class="menu-item" href="contactus.html">Contact Us</a> </div>
                 <div> <a class="menu-item" href="login.html">Login</a> </div>
                 <div> <a class="menu-item" href="register.html">Register</a> </div>
-                
+
             </div>
         </div>
-           
+
     </header>
 
     <div class="scrollable-nottification">
         <marquee>
-            WELCOME TO ENGINEERING COLLEGE (CHENNAI)  &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;B. Tech 2022 admission open. {ApplyNow}   &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;  M. Tech registration window closed.
+            WELCOME TO ENGINEERING COLLEGE (CHENNAI) &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;B. Tech 2022 admission open.
+            {ApplyNow} &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp; M. Tech registration window closed.
         </marquee>
     </div>
 
     <div class="registration-form">
         <h4> Fill your Registration Form</h4>
-    <div>
-    <div class="input-row">Name: <input id="name" type="text" placeholder="Fullname"></div>
-    <div class="input-row">
-        <div>Gender:</div>
         <div>
-            <input name="gender" type="radio" value="male">
-            Male
-            <input name="gender" type="radio" value="female">
-            Female
-            <input name="gender" type="radio" value="transgender">
-            Transgender
+            <div class="input-row">Name: <input id="name" type="text" placeholder="Fullname"></div>
+            <div class="input-row">
+                <div>Gender:</div>
+                <div>
+                    <input name="gender" type="radio" value="male">
+                    Male
+                    <input name="gender" type="radio" value="female">
+                    Female
+                    <input name="gender" type="radio" value="transgender">
+                    Transgender
+                </div>
+            </div>
+            <div class="input-row-dob">
+                <label for="Date">Date of Birth:</label>
+                <input type="date" id="date" name="dateofbirth">
+            </div>
+            <div class="input-row">
+                <lebel for="Qualification">Qualification:</lebel>
+                <select name="Choose your higher qualification" id="qualification">
+                    <option value="select">select</option>
+                    <option value="10th(SSC/METRIC)">10th(SSC/METRIC)</option>
+                    <option value="12th(HSC/INTERMEDIATE)">12(HSC/INTERMEDIATE)</option>
+                    <option value="GRADUATION">GRADUATION</option>
+                    <option value="Post-Graduation">Post-Graduation</option>
+                </select>
+            </div>
+
+            <div class="input-row">
+                <div>Previous marks%:</div>
+                <div>
+                    <input name="marks" type="radio" value="below 60">
+                    Below 60
+                    <input name="marks" type="radio" value="above 60">
+                    60 or Above
+                </div>
+            </div>
+
+            <div class="input-row">
+                <div>Year-Gap:</div>
+                <div>
+                    <input name="yeargap" type="radio" value="yes">
+                    Yes
+                    <input name="yeargap" type="radio" value="no">
+                    No
+                </div>
+            </div>
+
+            <div class="input-row">
+                <div>Language:</div>
+                <div>
+                    <input name="language" type="checkbox" value="English">
+                    English
+                    <input name="language" type="checkbox" value="Hindi">
+                    Hindi
+                    <input name="language" type="checkbox" value="Tamil">
+                    Tamil
+                </div>
+            </div>
+            <div class="input-row">Email id: <input id="email" type="text" placeholder="Enter your Email address"></div>
+            <div class="input-row">Mobile no. <input id="number" type="text" placeholder="Phone number"></div>
+
+
+            <div class="input-row">Father Name: <input id="fathername" type="text" placeholder="Father's Name"></div>
+
+
+            <div class="input-row">
+                <div>Occupation:</div>
+                <div>
+                    <input type="radio" value="Bussiness" name="Occupation">
+                    Bussiness
+                    <input type="radio" value="Service" name="Occupation">
+                    Service-Man
+                    <input type="radio" value="farmer" name="Occupation">
+                    Farmer
+                </div>
+            </div>
+            <div class="input-row">MotherName: <input id="mothername" type="text" placeholder="Mother's Name"></div>
+
+
+            <div class="input-row">
+                <div>Aadhar Card:</div>
+                <div>
+                    <form>
+                        <input type="file" id="myFile" name="filename">
+                    </form>
+                </div>
+            </div>
+
+            <div class="input-row">
+                <div>12th Marksheet:</div>
+                <div>
+                    <form>
+                        <input type="file" id="myFile" name="filename">
+                    </form>
+                </div>
+            </div>
+
+
+            <div class="input-row"> Address: <input id="address" type="text" placeholder="Enter your parmanent address">
+            </div>
+            <div class="input-row">
+
+                <div></div>
+                <div>
+                    <button onclick="submitForm()"> Submit</button>
+
+                </div>
+            </div>
         </div>
-    </div>
-    <div class="input-row-dob">
-        <label for="Date">Date of Birth:</label>
-        <input type="date" id="date" name="dateofbirth">
-    </div>
-    <div class="input-row">
-        <lebel for="Qualification">Qualification:</lebel>
-    <select name="Choose your higher qualification" id="qualification">
-        <option value="select">select</option>
-        <option value="10th(SSC/METRIC)">10th(SSC/METRIC)</option>
-        <option value="12th(HSC/INTERMEDIATE)">12(HSC/INTERMEDIATE)</option> 
-        <option value="GRADUATION">GRADUATION</option>
-        <option value="Post-Graduation">Post-Graduation</option>
-    </select>
-    </div>
-
-    <div class="input-row">
-        <div>Previous marks%:</div>
-        <div>
-            <input name="marks" type="radio" value="below 60">
-            Below 60
-            <input name="marks" type="radio" value="above 60">
-            60 or Above
-        </div>
-    </div>
-
-    <div class="input-row">
-        <div>Year-Gap:</div>
-        <div>
-            <input name="yeargap" type="radio" value="yes">
-            Yes
-            <input name="yeargap" type="radio" value="no">
-            No
-        </div>
-    </div>
-
-    <div class="input-row">
-        <div>Language:</div>
-        <div>
-            <input name="language" type="checkbox" value="English">
-            English
-            <input name="language" type="checkbox" value="Hindi">
-            Hindi
-            <input name="language" type="checkbox" value="Tamil">
-            Tamil
-        </div>
-    </div>
-    <div class="input-row">Email id: <input id="email" type="text" placeholder="Enter your Email address"></div>
-    <div class="input-row">Mobile no. <input id="number" type="text" placeholder="Phone number"></div>
-
-   
-    <div class="input-row">Father Name: <input id="fathername" type="text" placeholder="Father's Name"></div>
-    
-
-    <div class="input-row">
-        <div>Occupation:</div>
-        <div>
-            <input type="radio" value="Bussiness" name="Occupation">
-            Bussiness
-            <input type="radio" value="Service" name="Occupation">
-            Service-Man
-            <input type="radio" value="farmer" name="Occupation">
-            Farmer
-        </div>
-    </div>
-    <div class="input-row">MotherName: <input id="mothername" type="text" placeholder="Mother's Name"></div>
-    
-   
-    <div class="input-row">
-        <div>Aadhar Card:</div>
-        <div>
-            <form>
-                <input type="file" id="myFile" name="filename">
-            </form>
-        </div>
-    </div>
-
-    <div class="input-row">
-        <div>12th Marksheet:</div>
-        <div>
-            <form>
-                <input type="file" id="myFile" name="filename">
-            </form>
-        </div>
-    </div>
-
-
-    <div class="input-row"> Address: <input id="address" type="text" placeholder="Enter your parmanent address"> </div>
-    <div class="input-row">
-
-       <div></div>
-       <div>
-            <button onclick="submitForm()"> Submit</button>
-           
-       </div>
-    </div>
-</div>
-
-
-
 </body>
 
 </html>

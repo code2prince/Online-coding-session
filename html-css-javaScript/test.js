@@ -48,9 +48,9 @@ function displayStudent(list){
     var address = document.createElement('div');
     address.innerText = list[i].address;
 
-    var deleteStudnetBtton =  document.createElement('div');
+    var deleteStudnetBtton =  document.createElement('button');
     deleteStudnetBtton.setAttribute('data-id', list[i].id);
-    deleteStudnetBtton.innerText = 'X';
+    deleteStudnetBtton.innerText = 'Delete';
     deleteStudnetBtton.onclick = deleteUser;
     
 
@@ -75,17 +75,16 @@ function displayStudent(list){
 
   function deleteUser(e) {
     console.log('deleteing user', e.target);
-    console.log(e.target.dataset.id);
+    console.log(typeof e.target.dataset.id);
 
-   
-     newArray= Array.filter()
-
-    var newList = studentList.filter();
-
-    displayStudent(newList)
+    var id = parseInt(e.target.dataset.id);
 
     // first remove studnet form studentList (use the id to do achive that)
+    studentList = studentList.filter((student) => student.id !== id);
+
+
     // call displayStudent with new studentList
+    displayStudent(studentList);
   }
 
   
