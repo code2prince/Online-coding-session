@@ -31,6 +31,7 @@ background-color: aquamarine;
 h4{ color:mediumslateblue}
 button {
     background-color:yellow;
+    cursor: pointer;
 }
 .input-row-dob{
     display:grid;

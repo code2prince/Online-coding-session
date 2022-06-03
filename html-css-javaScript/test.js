@@ -5,6 +5,7 @@ function addStudent()
   var name = document.getElementById("name").value;
   var email = document.getElementById("email").value;
   var number = document.getElementById("number").value;
+  var address = document.getElementById("address").value;
 
   
 
@@ -13,6 +14,7 @@ function addStudent()
     name: name,
     email: email,
     contact: number,
+    address: address,
   };
 
 
@@ -43,6 +45,9 @@ function displayStudent(list){
     var number = document.createElement('div');
     number.innerText = list[i].contact;
 
+    var address = document.createElement('div');
+    address.innerText = list[i].address;
+
     var deleteStudnetBtton =  document.createElement('div');
     deleteStudnetBtton.setAttribute('data-id', list[i].id);
     deleteStudnetBtton.innerText = 'X';
@@ -59,6 +64,7 @@ function displayStudent(list){
     studetRow.appendChild(name);
     studetRow.appendChild(email);
     studetRow.appendChild(number);
+    studetRow.appendChild(address);
     studetRow.appendChild(deleteStudnetBtton);
 
     whereToDisplay.appendChild(studetRow)
@@ -71,9 +77,10 @@ function displayStudent(list){
     console.log('deleteing user', e.target);
     console.log(e.target.dataset.id);
 
-    Array.filter()
+   
+     newArray= Array.filter()
 
-    var newList = studentList.filter(fasdfasdfasdfasdf);
+    var newList = studentList.filter();
 
     displayStudent(newList)
 

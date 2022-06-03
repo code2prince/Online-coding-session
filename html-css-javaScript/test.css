@@ -1,6 +1,6 @@
-.fifty-fifty-grid {
+.thirty-sixty-grid {
     display: grid;
-    grid-template-columns: 48% 45%;
+    grid-template-columns: 35% 63%;
     grid-gap: 2%;
 }
 .input-row{
@@ -14,6 +14,7 @@
 }
 .studet-row {
     display: grid;
-    grid-template-columns: 30px 200px 250px 100px 30px;
+    grid-template-columns: 30px 100px 300px 100px 100px 30px;
     border-bottom: 1px solid #cdcdcd;
+    background-color: darkorange;
 }
