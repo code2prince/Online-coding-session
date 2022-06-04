@@ -1,92 +1,8 @@
+//console.log("Details");
 
-console.log("Details");
-
-var student [
-    {
-        name = 'Prince'
-                 email = 'princekumarsharma365@gmail.com'
-                 number = '8888888888'
-                 address = 'chennai'
-    },
-    {
-        name = 'raj'
-                 email = 'raj@gmail.com'
-                 number = '7777777777'
-                 address = 'chennai'
-    }
-];
-
-
-function printTable() {
-    var table = document.createElement('table');
-    var tr = document.createElement('tr');
-
-    var th1 = document.createElement('th');
-    var th2 = document.createElement('th');
-    var th3 = document.createElement('th');
-    var th4 = document.createElement('th');
-
-    th1.innerText = 'Name';
-    th2.innerText = 'email';
-    th3.innerText = 'number';
-    th4.innerText = 'address';
-
-
-    tr.appendChild(th1);
-    tr.appendChild(th2);
-    tr.appendChild(th3);
-    tr.appendChild(th4);
-
-
-    table.appendChild(tr);
-
-
-    for (var i = 0; i < student.length; i++) {
-        var tr = document.createElement('tr');
-
-        var td1 = document.createElement('td');
-        var td2 = document.createElement('td');
-        var td3 = document.createElement('td');
-        var td4 = document.createElement('td');
-
-
-        td1.innerText = student[i].name;
-        td2.innerText = student[i].email;
-        td3.innerText = student[i].number;
-        td4.innerText = student[i].address;
-
-
-        tr.appendChild(td1);
-        tr.appendChild(td2);
-        tr.appendChild(td3);
-        tr.appendChild(td4);
-
-
-        table.appendChild(tr);
-    }
-    table.setAttribute('border', 1);
-
-    document.getElementById('student').appendChild(table);
-
-    var p = document.createElement('p');
-    p.innerText = "find me";
-    document.body.appendChild(p);
-}
-printTable();
+var aplicantList = [];
 
 function submitForm() {
-
-    /* var name=document.name.value;
-     var mobileno=document.mobileno.value;
-
-     var tr= document.createElement('tr');
-     var td1 = tr.appendChild(document.createElement('td'));
-     var td2 = tr.appendChild(document.createElement('td'));
-     td1.innerHTML=name;
-     td2.innerHTML=mobileno;
-      document.getElementById("tb1").appendChild(tr); */
-
-
 
     var name = document.getElementById('name').value;
     var fathername = document.getElementById('fathername').value;
@@ -97,8 +13,15 @@ function submitForm() {
     var dateofbirth = document.getElementById('date').value;
     var qualification = document.getElementById('qualification').value;
 
-
-
+    var radioButtons = document.querySelectorAll('input[name="gender"]');
+    var selectedGender;
+    // for(var i=0; i<radioButtons.length; i++)
+    for (var rd of radioButtons) {
+        if (rd.checked) {
+            selectedGender = rd.value;
+            break;
+        }
+    }
 
 
     var radioButtons = document.querySelectorAll('input[name="yeargap"]');
@@ -129,15 +52,7 @@ function submitForm() {
     });
 
 
-    var radioButtons = document.querySelectorAll('input[name="gender"]');
-    var selectedGender;
-    // for(var i=0; i<radioButtons.length; i++)
-    for (var rd of radioButtons) {
-        if (rd.checked) {
-            selectedGender = rd.value;
-            break;
-        }
-    }
+  
     var radioButtons = document.querySelectorAll('input[name="Occupation"]');
     var selectedOccupation;
     // for(var i=0; i<radioButtons.length; i++)
@@ -153,8 +68,28 @@ function submitForm() {
 
 
 
-    if (name && email && number) {
+    if (name && email && number ) {
+        
         // TODO: create a applicationObject with all the values and push it into an global array applicationArray.
+
+        var aplicantObject ={
+            id:aplicantList.length+1,
+            name:name,
+            gender:selectedGender,
+            dateofbirth:dateofbirth,
+            email:email,
+            number:number,
+            address:address,
+            fathername:fathername,
+            mothername:mothername,
+            qualification:qualification,
+        }
+    
+            aplicantList.push(aplicantObject);
+            console.log(aplicantList);
+            displayStudent(aplicantList);
+    
+
         console.log('sending data', name, dateofbirth, email, number, selectedyeargap, selectedmarks, selectedGender, selectedOccupation, qualification, fathername, mothername, address);
         // console.log('send data to server' ,name,selectedyeargap,selectedmarks,selectedGender,dateofbirth,language,email,number,fathername,selectedqualification2,selectedOccupation,mothername,selectedqualification1,address);
     } else {
@@ -164,12 +99,89 @@ function submitForm() {
 
 
 
-function displayApplication(list) {
-    // TODO: display all the applicatiuons > applicationArray
-}
 
-function deleteApplications() {
+    
+function displayStudent(list){
+    // TODO: display all the studentlist > applicationArray
+    var whereToDisplay = document.getElementById('student-list');
+    whereToDisplay.innerHTML = '';
+  
+    for(var i=0; i<list.length; i++) {
+  
+      var seqNum  = document.createElement('div');
+      seqNum.innerText = list[i].id;
+  
+      var name = document.createElement('div');
+      name.innerText = list[i].name;
+
+      var selectedGender =document.createElement('div');
+      selectedGender.innerText = list[i].gender;
+
+      var dateofbirth = document.createElement('div');
+      dateofbirth.innerText = list[i].dateofbirth;
+    
+      var email = document.createElement('div');
+      email.innerText = list[i].email;
+    
+      var number = document.createElement('div');
+      number.innerText = list[i].number;
+  
+      var address = document.createElement('div');
+      address.innerText = list[i].address;
+
+      var fathername = document.createElement('div');
+      fathername.innerText = list[i].fathername;
+    
+      var mothername = document.createElement('div');
+      mothername.innerText = list[i].mothername;
+
+      var qualification=document.createElement('div');
+      qualification.innerText = list[i].qualification;
+  
+  
+      var deleteStudnetBtton =  document.createElement('button');
+      deleteStudnetBtton.setAttribute('data-id', list[i].id);
+      deleteStudnetBtton.innerText = 'Delete';
+      deleteStudnetBtton.onclick = deleteUser;
+      
+  
+  
+      var studentRow = document.createElement('div');
+      studentRow.setAttribute('class', 'student-row');
+  
+  
+  
+      studentRow.appendChild(seqNum);
+      studentRow.appendChild(name);
+      studentRow.appendChild(selectedGender);
+      studentRow.appendChild(dateofbirth);
+      studentRow.appendChild(email);
+      studentRow.appendChild(number);
+      studentRow.appendChild(address);
+      studentRow.appendChild(fathername);
+      studentRow.appendChild(mothername);
+      studentRow.appendChild(qualification);
+      studentRow.appendChild(deleteStudnetBtton);
+  
+      whereToDisplay.appendChild(studentRow)
+  
+  
+    }
+     
+  function deleteUser(e) {
+    console.log('deleteing user', e.target);
+    console.log(typeof e.target.dataset.id);
+
+    var id = parseInt(e.target.dataset.id);
+
     // TODO: get the id of application
     // TODO: filter the applicationArray by id
+    aplicantList = aplicantList.filter((student) => student.id !== id);
+
     // TODO: call displayApplication by passign the filtered Array
+    displayStudent(aplicantList);
+  }
+
+  
+
 }
