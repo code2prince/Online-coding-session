@@ -88,6 +88,8 @@ function submitForm() {
             aplicantList.push(aplicantObject);
             console.log(aplicantList);
             displayStudent(aplicantList);
+            displayFilter();
+
     
 
         console.log('sending data', name, dateofbirth, email, number, selectedyeargap, selectedmarks, selectedGender, selectedOccupation, qualification, fathername, mothername, address);
@@ -184,4 +186,54 @@ function displayStudent(list){
 
   
 
+}
+
+function displayFilter(){
+    if(aplicantList.length>0){
+
+        var filterDiv=document.getElementById('filter');
+        filterDiv.innerHTML=''
+        // create a male-female dropdown
+        // create selectElement
+        var Filter=document.createElement('select');
+        //attach onchange
+        Filter.onchange=filterAplicationList;
+
+        //create option element with attribute "select " & "value"
+        var select =document.createElement('option');
+        select.text = "select";
+        select.value = "select";
+        //select.setAttribute('value', 'select');
+        //select.innerText= 'select';
+        var male=document.createElement('option');
+        //male.setAttribute('value', 'male');
+        //male.innerText= 'male';
+        male.text = "male";
+        male.value = "male";
+        var female=document.createElement('option');
+        //female.setAttribute('value', 'female');
+        //female.innerText= 'female';
+
+        female.text = "female";
+        female.value = "female";
+
+        
+        Filter.appendChild(select);
+        Filter.appendChild(male);
+        Filter.appendChild(female);
+
+       
+        filterDiv.appendChild(Filter)
+    }
+}
+function filterAplicationList(e){
+    console.log(e.target.value);
+    if(e.target.value!=='select'){
+        var output = aplicantList.filter((x)=>x.gender===e.target.value );
+        console.log(output);
+        displayStudent(output)
+    }
+    else{
+        displayStudent(aplicantList)
+    }
 }

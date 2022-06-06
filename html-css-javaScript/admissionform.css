@@ -79,6 +79,11 @@ button {
 
 }
 .student-list-header {
-    background: #000;
+    background: purple;
     color: #fff;
+}
+.heading-filter-grid{
+    display:grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
 }

@@ -65,3 +65,19 @@ body {
     grid-template-columns: 135px 100px;
     margin-bottom: 10px;
 }
+.admission-row{
+    display:grid;
+    grid-template-columns: 60px 100px 150px 100px 150px 150px 150px 150px 100px 100px 100px;
+    border-bottom: 1px solid #bbb;
+
+}
+.admission-list-header{
+    background: purple;
+    color: aliceblue;
+
+}
+.heading-filter-grid{
+    display: grid;
+    grid-template-columns: auto auto auto ;
+    justify-content: space-between;
+}
