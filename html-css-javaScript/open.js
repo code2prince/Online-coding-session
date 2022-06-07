@@ -150,6 +150,7 @@ function displayFilter(){
         filterDiv.innerHTML=''
        
         var Filter=document.createElement('select');
+        Filter.setAttribute('id','courceID');
         Filter.onchange=filterAplicationList;
 
         var course =document.createElement('option');
@@ -186,9 +187,20 @@ function displayFilter(){
 }
 function filterAplicationList(e){
     console.log(e.target.value);
+
+
     if(e.target.value!=='course'){
         var output = admissionList.filter((x)=>x.course===e.target.value );
         console.log(output);
+
+        // find if stream is already selected
+        // if already selected then furhter filter the list by steam as well
+        var selectedSteam  = document.getElementById('streamID').value;
+       
+        if(selectedSteam && selectedSteam !== 'stream') {
+            output = output.filter((x)=>x.stream===selectedSteam);
+        }
+
         displayStudent(output)
     }
     else{
@@ -204,6 +216,7 @@ function displayFilter1(){
         filterDiv1.innerHTML=''
        
         var Filter1=document.createElement('select');
+        Filter1.setAttribute('id', 'streamID')
         Filter1.onchange=filterAplicationList1;
 
         var stream =document.createElement('option');
@@ -211,8 +224,8 @@ function displayFilter1(){
         stream.value = "stream";
         
         var CSE=document.createElement('option');
-        CSE.text = "CSE";
-        CSE.value = "CSE";
+        CSE.text = "Computer Science";
+        CSE.value = "Computer Science";
 
 
         var Mechanical=document.createElement('option');
@@ -224,8 +237,8 @@ function displayFilter1(){
         Civil.value = "Civil";
 
         var EE=document.createElement('option');
-        EE.text = "EE";
-        EE.value = "EE";
+        EE.text = "Electical";
+        EE.value = "Electical";
 
         var Aeronautical=document.createElement('option')
         Aeronautical.text = "Aeronautical";
@@ -246,7 +259,13 @@ function displayFilter1(){
 function filterAplicationList1(e){
     console.log(e.target.value);
     if(e.target.value!=='stream'){
-        var output = admissionList.filter((x)=>x.stream===e.target.value );
+        
+        // filter all the applications with selected cource
+        var selectedCource = document.getElementById('courceID').value;
+        var newList = admissionList.filter((x) => x.course === selectedCource);
+        console.log('selected cource lsit ', newList)
+
+        var output = newList.filter((x)=>x.stream===e.target.value );
         console.log(output);
         displayStudent(output)
     }

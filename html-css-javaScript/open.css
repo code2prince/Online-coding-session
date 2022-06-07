@@ -78,6 +78,7 @@ body {
 }
 .heading-filter-grid{
     display: grid;
-    grid-template-columns: auto auto auto ;
+    grid-template-columns: auto auto;
     justify-content: space-between;
+    align-items: center;
 }
