@@ -82,3 +82,7 @@ body {
     justify-content: space-between;
     align-items: center;
 }
+.filtering{
+   display: flex;
+   justify-content: flex-end; 
+}
