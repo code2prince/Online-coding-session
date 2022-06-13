@@ -122,15 +122,62 @@ const playerList = [
 ];
 
 
-// 1. get the total no of RUNs scored by all batsmen
+//1. get the total no of RUNs scored by all batsmen
+//method 1 forEach
+let sum=0;
+playerList.forEach(x =>{sum += x.runs});
+console.log(sum);
+
+//method 2 
+let sum1=0;
+for(i=0; i<playerList.length; i++){
+    sum1+= playerList[i].runs;
+}
+console.log(sum1);
+//285
 
 // 2. get the total no of FOURs hit by all batsmen
+let fours=0;
+playerList.forEach(x=>{fours+= x.four});
+console.log(fours);
+
+//36
 
 // 3. get the total no of SIXs hit by all batsmen
+let sixes=0;
+for(i=0; i<playerList.length; i++){
+    sixes+= playerList[i].six;
+}
+console.log(sixes);
+
+//method forEach
+
+let totalSixes=0;
+playerList.forEach(x=>{totalSixes+= x.six});
+console.log(totalSixes);
+//6
 
 // 4. get the total no of SINGLEs scrored by all batsmen
+ let totalSingles=0;
+ for(i=0; i<playerList.length; i++){
+     totalSingles+= playerList[i].single;
+ }
+console.log(totalSingles);
+
+//61
 
 // 5. get the total no of DOUBLEs scrored by all batsmen
+let doubles=0;
+playerList.forEach((x)=>{doubles+= x.double});
+console.log(doubles);
+
+//19
 
 // 6. get the total no of THREEs scrored by all batsmen
+
+let triple=0;
+for(i=0; i<playerList.length; i++){
+    triple+= playerList[i].three;
+}
+console.log(triple);
 
