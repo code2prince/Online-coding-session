@@ -105,6 +105,37 @@ for(i=0; i<candidateList.length; i++){
        allCandidate.push(candidateList[i]);
    }
 }
+
+candidateList.filter( x => {
+    let isQualified = false;
+    if(x.marks >= 75) {
+        isQualified = true;
+    }
+    if(x.caste === 'OBC' && x.marks+5 >=75) {
+        isQualified = true;
+    }
+    if(x.caste === 'SC/ST' && x.marks+10 >=75) {
+        isQualified = true;
+    }
+    return isQualified;
+});
+
+candidateList.map(x => {
+    if(x.caste === 'OBC') {
+        return {
+            ...x,
+            marks: x.marks+5
+        }
+    }
+    if(x.caste === 'SC/ST') {
+        return {
+            ...x,
+            marks: x.marks+10
+        }
+    }
+}).filter(x => x.marks >=75);
+
+
 console.log(allCandidate);
 
 /*
