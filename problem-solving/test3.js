@@ -1,4 +1,4 @@
-const playerList = [
+const candidateList = [
     {
         enrollmentId: 1,
         marks: 65,
@@ -88,20 +88,112 @@ const playerList = [
 
 
 // Que- 1:- Find all qualified candidates (Do not apply any benefit)
+const candidate= candidateList.filter((x)=> x.marks>75);
+console.log(candidate);
+/*
+{ enrollmentId: 5, marks: 79, caste: 'General' },
+{ enrollmentId: 6, marks: 82, caste: 'General' },
+{ enrollmentId: 8, marks: 77, caste: 'General' },
+{ enrollmentId: 14, marks: 78, caste: 'General' }
+*/
+
 
 // Que- 2:- Find all qualified candidates (apply OBC and SC/ST benefits)
+let allCandidate=[];
+for(i=0; i<candidateList.length; i++){
+   if(candidateList[i].caste==='General' && candidateList[i].marks>=75 || candidateList[i].caste==='OBC' && candidateList[i].marks>=70 || candidateList[i].caste==='SC/ST' && candidateList[i].marks>=65 ) {
+       allCandidate.push(candidateList[i]);
+   }
+}
+console.log(allCandidate);
+
+/*
+ { enrollmentId: 2, marks: 70, caste: 'OBC' },
+  { enrollmentId: 3, marks: 65, caste: 'SC/ST' },
+  { enrollmentId: 5, marks: 79, caste: 'General' },
+  { enrollmentId: 6, marks: 82, caste: 'General' },
+  { enrollmentId: 8, marks: 77, caste: 'General' },
+  { enrollmentId: 14, marks: 78, caste: 'General' }
+
+*/
 
 // Que- 3:- Find all OBC candidates who have qualified exam becasue of benefit given.
+let candidate1=[];
+for(i=0; i<candidateList.length; i++){
+    if(candidateList[i].caste==='OBC' && candidateList[i].marks>=70){
+        candidate1.push(candidateList[i]);
+    }
+}
+console.log(candidate1);
+
+// [ { enrollmentId: 2, marks: 70, caste: 'OBC' } ]
 
 // Que- 4:- Find all SC/ST candidates who have qualified exam becasue of benefit given.
 
+let scSt=[];
+for(i=0; i<candidateList.length; i++){
+    if(candidateList[i].caste==='SC/ST' && candidateList[i].marks >= 65){
+        scSt.push(candidateList[i]);
+    }
+}
+console.log(scSt);
+
+// [ { enrollmentId: 3, marks: 65, caste: 'SC/ST' } ]
+
 // Que- 5:- Find all OBC candidates who have qualified exam without benefit.
+let obc=[];
+for(i=0; i<candidateList.length; i++){
+    if(candidateList[i].caste==='OBC' && candidateList[i].marks >=75){
+        obc.push(candidateList[i]);
+    }
+}
+console.log(obc);
+
+// []  no any OBC candidates are their in list
 
 // Que- 6:- Find all SC/ST candidates who have qualified exam without benefit.
 
+let candidateScST=[];
+for(i=0; i<candidateList.length; i++){
+    if(candidateList[i].caste==='SC/ST' && candidateList[i].marks>= 75){
+        candidateScST.push(candidateList[i]);
+    }
+}
+console.log(candidateScST);
+
 // Que- 7:- Find all OBC & SC/ST candidates who have qualified exam becasue of benefit given.
+let candidate2 =[];
+for(i=0; i<candidateList.length; i++){
+    if(candidateList[i].caste==='OBC' && candidateList[i].marks >=70 || candidateList[i].caste==='SC/ST' && candidateList[i].marks>=65){
+        candidate2.push(candidateList[i]);
+    }
+}
+console.log(candidate2);
+
+/*
+[
+  { enrollmentId: 2, marks: 70, caste: 'OBC' },
+  { enrollmentId: 3, marks: 65, caste: 'SC/ST' }
+]
+*/
 
 // Que- 8:- Find all OBC & SC/ST candidates who have qualified exam without benefit.
+let candidate3=[];
+for(i=0; i<candidateList.length; i++){
+    if(candidateList[i].caste==='OBC'  && candidateList[i].marks>=75 || candidateList.caste==='SC/ST' && candidateList.marks>=75){
+        candidate3.push(candidateList[i]);
+    }
+}
+console.log(candidate3);
+
+// [] 
 
 // Que- 9:- Find total no of students who have cleared exam (apply benefit).
+
+let totalCandidate=0;
+for(i=0; i<candidateList.length; i++){
+    totalCandidate+= candidateList[i].caste==='General' && candidateList[i].marks>=75  || candidateList[i].caste==='OBC' && candidateList[i].marks>=70 || candidateList[i].caste==='SC/ST' && candidateList[i].marks>=65 ;
+}
+console.log(totalCandidate);
  
+// 6
