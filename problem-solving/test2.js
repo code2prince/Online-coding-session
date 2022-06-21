@@ -124,15 +124,65 @@ const playerList = [
 
 //1. get the total no of RUNs scored by all batsmen
 //method 1 forEach
+let total=0;
+ 
+    playerList.forEach(x=>  {total+=x.runs})
+
+console.log(total)
 
 
+
+let totalRun=0;
+for(i=0;i<playerList.length; i++)
+{
+    totalRun+= playerList[i].runs;
+}
+console.log("TOtal Score: ", totalRun)
 // 2. get the total no of FOURs hit by all batsmen
 
+let fourHit=0;
+for(i=0; i<playerList.length; i++)
+{
+   fourHit+= playerList[i].four; 
+}
+console.log("All fours:" ,fourHit);
 // 3. get the total no of SIXs hit by all batsmen
+
+let totalSix=0;
+for(i=0; i<playerList.length; i++)
+{
+    totalSix+=playerList[i].six;
+}
+console.log("All Total sixes :", totalSix );
+
+
 
 // 4. get the total no of SINGLEs scrored by all batsmen
 
+let single=0;
+for(i=0; i<playerList.length; i++)
+{
+    single+=playerList[i].single;
+}
+console.log("Total Singles:" ,single);
+
 // 5. get the total no of DOUBLEs scrored by all batsmen
 
+let double=0;
+for(i=0; i<playerList.length; i++)
+{
+    double+= playerList[i].double;
+}
+console.log("Total doubles:", double);
+
 // 6. get the total no of THREEs scrored by all batsmen
+let three=0;
+for(i=0; i<playerList.length; i++)
+{
+    three+= playerList[i].three;
+}
+console.log("TOtal Three:", three);
+
+
+
 
