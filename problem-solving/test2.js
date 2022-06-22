@@ -136,6 +136,14 @@ console.log("Total Score: ", totalRun)
 
 // Total Score: 285
 
+
+// total boundry 
+
+let boundry=0;
+for(i=0; i<playerList.length; i++){
+    boundry+= ((playerList[i].four) || (playerList[i].six));
+}
+console.log("total boundries:" , boundry);
 // 2. get the total no of FOURs hit by all batsmen
 
 let fourHit=0;
