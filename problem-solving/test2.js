@@ -165,6 +165,10 @@ for(i=0; i<playerList.length;i++){
     }
 }
 console.log("maximum four :" ,highestFour);
+
+// who have hit highest singles
+
+
 // 2. get the total no of FOURs hit by all batsmen
 
 let fourHit=0;
