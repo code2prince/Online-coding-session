@@ -1,2 +1,6 @@
-const candidate= candidateList.filter((x)=> x.marks>75);
-// console.log(candidate);
+et sum=0;
+// for(i=0;i<playerList.length; i++)
+// {
+//     sum+= playerList[i].runs;
+// }
+// console.log("sum: ", sum)

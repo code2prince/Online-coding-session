@@ -123,7 +123,8 @@ const playerList = [
 
 
 //1. get the total no of RUNs scored by all batsmen
-//method 1 forEach
+
+
 
 
 let totalRun=0;
@@ -190,5 +191,23 @@ console.log("Total Three:", three);
 //Total Three: 2;
 
 
+// total players  name-List
 
 
+for(i=0;i<playerList.length; i++){
+    console.log(playerList[i].name);
+}
+
+
+// Sachin
+// Sehwag
+// Gambir
+// Kohli
+// Rohit
+// Yuvraj
+// Dhoni
+// Zadeja
+// Zaheer
+// Nehra
+// Harbhajan
+// RP Singh
