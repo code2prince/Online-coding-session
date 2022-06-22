@@ -1,10 +1,20 @@
 // write a function to get the factorial of given a parameter
 
-function factorial(num) {
-    for(i=0; i<num; i++ ){
-        num=num*i;
-    }
-}
-console.log(factorial);
+/*
+num = 5;
+i=6;
+a = 120;
+*/
 
-factorial(5);
+function factorial(num) {    
+    var result = 1;
+    for(i=1; i<=num; i++ ){
+       result = result * i; 
+    }
+
+    console.log(result);
+}
+
+factorial(6);
+
+
