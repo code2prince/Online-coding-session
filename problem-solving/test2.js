@@ -147,11 +147,16 @@ console.log("total boundries:" , boundry);
 
 // highest no of singles by a batsmen
 
-let highestSingle=0;
+var highestSingle = 0;
 for(i=0; i<playerList.length; i++){
-    highestSingle+=( playerList[i].single) || (playerList[i].single)
+   if(playerList[i].single > highestSingle) {
+    highestSingle = playerList[i].single;
+   }
 }
 console.log("highest Single:", highestSingle);
+
+// highest no of FOURs by a batsmen
+
 
 // 2. get the total no of FOURs hit by all batsmen
 
