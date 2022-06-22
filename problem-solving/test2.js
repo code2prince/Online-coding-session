@@ -167,7 +167,14 @@ for(i=0; i<playerList.length;i++){
 console.log("maximum four :" ,highestFour);
 
 // who have hit highest singles
-
+let maxSingle=[];
+for(i=0; i<playerList.length; i++){
+    if(playerList[i].single> maxSingle)
+    {
+        maxSingle.push(playerList[i].name);
+    }
+}
+console.log("maximum single by a batsmen:", maxSingle);
 
 // 2. get the total no of FOURs hit by all batsmen
 
