@@ -5,25 +5,40 @@ function prime(num){
         return true;
     }
     else if(num>1){
+        let flag = true;
         for(i=2; i<num; i++){
-            if(num % i !==0){
-                return true;
-            }
-            else if(num === i*1){
-                return false;
-            }
-            else{
-                return false;
+            
+            if(num % i === 0) {
+                flag = false;
             }
         }
+        return flag;
         
     }
 }
-console.log(prime(8));
+
+function primeNumners(range) {
+    const primeArr = [];
+    for(let i=2; i<=range; i++){
+        const isPrimeNumber = prime(i);
+        if(isPrimeNumber){
+            primeArr.push(i);
+        }
+    }    
+    console.log(primeArr)
+}
+
+primeNumners(20)
     
 
 
 
 
 
-// 2. write a function to find n prime numbers (n will be provided as argument to funtions)
+// 2. write a function to find n prime numbers bw 2 given numbers 
+function primeNumnersBwRange(lowerRange, upperRange) {
+    
+}
+
+
+primeNumnersBwRange(10, 20);
