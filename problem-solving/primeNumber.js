@@ -37,7 +37,7 @@ primeNumners(20)
 
 // 2. write a function to find n prime numbers bw 2 given numbers 
 function primeNumnersBwRange(lowerRange, upperRange) {
-    
+
 }
 
 
