@@ -36,6 +36,7 @@ primeNumbers(20)
 
 
 // 2. write a function to find n prime numbers bw 2 given numbers 
+
 function primeNumbersBwRange(lowerRange, upperRange) {
     for(i=lowerRange; i<= upperRange; i++){
         let flag= true;
@@ -51,6 +52,10 @@ function primeNumbersBwRange(lowerRange, upperRange) {
     }
     }
     
+
+function primeNumnersBwRange(lowerRange, upperRange) {
+
+}
 }
 
 
@@ -58,7 +63,7 @@ primeNumbersBwRange(10, 20);
 
 // check a no prime or not
 
-let num=2;
+let num=11;
 if(num>=2)
 var isPrime=true;
 for(i=2;i<num; i++){
