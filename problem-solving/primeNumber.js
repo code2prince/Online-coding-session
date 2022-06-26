@@ -42,24 +42,15 @@ function primeNumbersBwRange(lowerRange, upperRange) {
         let flag= true;
         for(j=2; j<i; j++){
             if(i%j===0){
-                flag=false;
-                
+                flag=false;    
             }
         }
-    
         if(i >1 && flag=== true ){
         console.log(i);
     }
     }
-    
-
-function primeNumnersBwRange(lowerRange, upperRange) {
-
 }
-}
-
-
-primeNumbersBwRange(10, 20);
+primeNumbersBwRange(10, 200);
 
 // check a no prime or not
 
@@ -76,3 +67,4 @@ if(isPrime==true){
 }
 else
 console.log(`${num} is not a prime no`);
+
