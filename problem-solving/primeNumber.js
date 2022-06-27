@@ -17,7 +17,7 @@ function prime(num){
     }
 }
 
-function primeNumners(range) {
+function primeNumbers(range) {
     const primeArr = [];
     for(let i=2; i<=range; i++){
         const isPrimeNumber = prime(i);
@@ -28,7 +28,7 @@ function primeNumners(range) {
     console.log(primeArr)
 }
 
-primeNumners(20)
+primeNumbers(20)
     
 
 
@@ -36,9 +36,35 @@ primeNumners(20)
 
 
 // 2. write a function to find n prime numbers bw 2 given numbers 
-function primeNumnersBwRange(lowerRange, upperRange) {
 
+function primeNumbersBwRange(lowerRange, upperRange) {
+    for(i=lowerRange; i<= upperRange; i++){
+        let flag= true;
+        for(j=2; j<i; j++){
+            if(i%j===0){
+                flag=false;    
+            }
+        }
+        if(i >1 && flag=== true ){
+        console.log(i);
+    }
+    }
 }
+primeNumbersBwRange(10, 200);
 
+// check a no prime or not
 
-primeNumnersBwRange(10, 20);
+let num=11;
+if(num>=2)
+var isPrime=true;
+for(i=2;i<num; i++){
+    if(num%i ===0){
+        isPrime= false;
+    }
+} 
+if(isPrime==true){
+    console.log(`${num} is prime no`);
+}
+else
+console.log(`${num} is not a prime no`);
+

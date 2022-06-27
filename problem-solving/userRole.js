@@ -22,10 +22,36 @@ var users = [
     {
         username: 'klm@gmail.com',
         password: '33445',
-        roles: ["admin"],
+        roles: "admin",
     },
 ];
 
 
 // write a function to get all the users having roles as "admin" & "view only" both
+function adminUser(users){
+    let admin=[];
+    for(i=0; i<users.length; i++){
+        if(users[i].roles=== "admin" && users[i].roles==="view only")
+        admin.push(users[i])
+        
+    }
+    console.log(admin);
+}
+adminUser(users);
+
 // write a function to get all the users having roles as "admin" role only
+
+function getUser(users){
+    
+    let user=[];
+    for(i=0; i<users.length; i++)
+    {
+        if(users[i].roles==="admin")
+        user.push(users[i]);    
+    }
+    
+    console.log(user);
+}
+getUser(users);
+
+
