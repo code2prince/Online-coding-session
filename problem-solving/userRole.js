@@ -22,7 +22,7 @@ var users = [
     {
         username: 'klm@gmail.com',
         password: '33445',
-        roles: "admin",
+        roles: ["admin"],
     },
 ];
 
@@ -31,7 +31,7 @@ var users = [
 function adminUser(users){
     let admin=[];
     for(i=0; i<users.length; i++){
-        if(users[i].roles=== "admin" && users[i].roles==="view only")
+        if(users[i].roles.includes('admin') && users[i].roles.includes('view only'))
         admin.push(users[i])
         
     }
@@ -46,7 +46,7 @@ function getUser(users){
     let user=[];
     for(i=0; i<users.length; i++)
     {
-        if(users[i].roles==="admin")
+        if(users[i].roles.includes('admin') && users[i].roles.length===1 )
         user.push(users[i]);    
     }
     
