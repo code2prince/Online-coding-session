@@ -40,7 +40,7 @@ var DailySharePrice=[
 // 1.lowest share price date
 
 let lowestPrice=DailySharePrice[0].price; 
-for(i=0; i<DailySharePrice.length; i++){
+for(i=1; i<DailySharePrice.length; i++){
     if(DailySharePrice[i].price < lowestPrice){
         lowestPrice=DailySharePrice[i].price;
         low=DailySharePrice[i].date;
@@ -54,7 +54,7 @@ console.log("lowest share price and date:", lowestPrice,low);
 
 //highest share date
 let highestPrice=DailySharePrice[0].price;
-for(i=0; i<DailySharePrice.length; i++){
+for(i=1; i<DailySharePrice.length; i++){
     if(DailySharePrice[i].price >  highestPrice){
       
        highestPrice=DailySharePrice[i].price;

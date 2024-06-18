@@ -413,7 +413,7 @@ console.log(bowlers);
 ]
 */
 
-// 9. find all the batsmen whoes level is A+
+// 9. find all the batsmen whose level is A+
 
 let batsmens=[];
 for(i=0; i<playerList.length; i++){

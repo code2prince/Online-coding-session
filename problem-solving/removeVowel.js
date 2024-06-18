@@ -22,6 +22,24 @@ var string= 'I am Prince Sharma';
 
 remVowel(string);
 
+// toUpperCase uses when we take vowels into caps 
+
+function remVowel(string){
+    var vowels = ['A','E','I','O','U'];
+    var a="";
+    for(i=0;i<string.length; i++){
+        if(!vowels.includes(string[i].toUpperCase()))
+        {
+            a+= string[i];
+        }
+    }
+    console.log(a);
+    return a;
+}
+var string= 'Rohit SHarma is Indian Cricket Team Player';
+
+remVowel(string);
+
 
 // function removeVowel(sentance){
 //     var sentanceArray=sentance.split('');

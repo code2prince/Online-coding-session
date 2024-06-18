@@ -402,16 +402,3 @@ console.log("total amount :", total);
 
 // total amount : 149490
 
-// find total samsung mobiles
-
-let samsungMobile=0;
-for(i=0; i<mobileItem.length; i++){
-  samsungMobile+= mobileList[i].name==='Samsung';
-{
-
-}
-console.log(samsungMobile);
-}
-//console.log("total samsung mobiles:", samsungMobile);
-const samsung=mobileList.filter((x)=> x.name==="Samsung")
-console.log(samsung);

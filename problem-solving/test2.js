@@ -13,7 +13,7 @@ const playerList = [
         batsmenNo: 2,
         name: 'Sehwag',
         runs: 40,
-        single: 44,
+        single: 4,
         double: 1,
         three: 0,
         four: 7,
@@ -148,11 +148,9 @@ console.log("total boundries:" , boundry);
 // highest no of singles by a batsmen
 
 var highestSingle = 0;
-var bstsmen = null;
 for(i=0; i<playerList.length; i++){
    if(playerList[i].single > highestSingle) {
     highestSingle = playerList[i].single;
-    bstsmen = playerList[i].name;
    }
 }
 console.log("highest Single:", highestSingle);
@@ -169,15 +167,14 @@ for(i=0; i<playerList.length;i++){
 console.log("maximum four :" ,highestFour);
 
 // who have hit highest singles
-var highestSingle1 = 0;
-var bstsmen;
+let maxSingle=[];
 for(i=0; i<playerList.length; i++){
-   if(playerList[i].single > highestSingle1) {
-    highestSingle1 = playerList[i].single;
-    bstsmen = playerList[i];
-   }
+    if(playerList[i].single> maxSingle)
+    {
+        maxSingle.push(playerList[i].name);
+    }
 }
-console.log("maximum single by a batsmen:", bstsmen.name, bstsmen.single);
+console.log("maximum single by a batsmen:", maxSingle);
 
 // 2. get the total no of FOURs hit by all batsmen
 
@@ -239,6 +236,7 @@ console.log("Total Three:", three);
 
 for(i=0;i<playerList.length; i++){
     console.log(playerList[i].name);
+   
 }
 
 

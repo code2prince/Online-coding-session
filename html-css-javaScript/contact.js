@@ -10,3 +10,6 @@ function submitForm(){
    alert('Please provide full detail')
   }
 }   
+function myFunction(x) {
+  x.classList.toggle("change");
+}

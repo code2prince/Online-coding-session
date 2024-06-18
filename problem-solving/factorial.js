@@ -17,4 +17,3 @@ function factorial(num) {
 
 factorial(6);
 
-

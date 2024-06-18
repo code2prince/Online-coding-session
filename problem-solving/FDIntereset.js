@@ -5,6 +5,7 @@
 
 const interestRate = 5;
 
+
 const fixedDepositAccounts = [
     {
         accountNo: '1000001',
@@ -29,6 +30,28 @@ const fixedDepositAccounts = [
     {
         accountNo: '1000006',
         balance: '210000',
-    }
+    },
 ];
 
+function fd(fixedDepositAccounts){
+let totalFd=[];
+
+let n=fixedDepositAccounts.length;
+let t=1;
+let r=interestRate;
+
+let p=fixedDepositAccounts.balance;
+let SI;
+
+for(i=0; i<n; i++){
+   SI=p*r*t/100;
+   
+//    if(SI[i].p())
+//    {
+    p=p+SI;
+    totalFd.push(p[i]);
+   }
+}
+console.log(totalFd[i]);
+//}
+fd(fixedDepositAccounts);
