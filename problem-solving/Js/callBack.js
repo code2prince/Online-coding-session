@@ -41,9 +41,9 @@ saveToDb(() => {
     console.log("Success Callback: Internet speed is good ,Inserted")
     saveToDb(() => {
     }, () => {
-        console.log("Success Callback: Internet speed is good ,Inserted")
+        console.log("Success2 Callback: Internet speed is good ,Inserted")
     }, () => {
-        console.log("Failure Callback: Weak Internet Connection")
+        console.log("Failure2 Callback: Weak Internet Connection")
     }
     )
 }, () => {
@@ -60,13 +60,13 @@ Welcome
 4
 Success Callback: Internet speed is good ,Inserted
 7
-Success Callback: Internet speed is good ,Inserted
+Success2 Callback: Internet speed is good ,Inserted
  ---------------------
 Welcome
 6
 Success Callback: Internet speed is good ,Inserted
 2
-Failure Callback: Weak Internet Connection
+Failure2 Callback: Weak Internet Connection
 
 -------------------
 Welcome
