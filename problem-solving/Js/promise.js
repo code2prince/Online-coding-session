@@ -48,38 +48,46 @@ Promise { <rejected> 'Failure: Weak Internet Connection' }
 
 //---------------Promise Chaining----------------------
 saveToDb("Layer1")
-.then(()=>{
+.then((result)=>{
     console.log("Level 1 data: Saved");
+    console.log('result=',result)
     return saveToDb("Layer 2");
 })
-.then(()=>{
+.then((result)=>{
+    console.log('result=',result);
     console.log("Level 2 data : saved")
 })
-.catch(()=>{
+.catch((error)=>{
+    console.log("error=",error);
     console.log("promise was rejected")
 })
 
 /*
 
 Layer1
-5
-Level 1 data: Saved
-Layer 2
 6
+Level 1 data: Saved
+result= Success: Internet Speed is Good, Inserted
+Layer 2
+10
+result= Success: Internet Speed is Good, Inserted
 Level 2 data : saved
 
 
 ------------------
 Layer1
-9
+10
 Level 1 data: Saved
+result= Success: Internet Speed is Good, Inserted
 Layer 2
 3
+error= Failure: Weak Internet Connection
 promise was rejected
 -------------------
 
 Layer1
-2
+1
+error= Failure: Weak Internet Connection
 promise was rejected
 -----------------
 */
